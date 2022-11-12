@@ -1,3 +1,12 @@
+const grupos = {
+    g1: "Empanadas",
+    g2: "Pizzas",
+    g3: "Postres",
+    g4: "Pastas",
+    g5: "Tartas",
+    g6: "Sanguches"
+}
+
 export default {
     urlEndpoint: "https://ik.imagekit.io/showimg/restorant-tutto-rico",
     logoNav: "tuttoLogo_po2GkzOEi.svg",
@@ -5,22 +14,16 @@ export default {
         igLogo: "igLogo_mT0wf2210.svg",
         fbLogo: "fbLogo_Zsy73e_uh.svg",
         twLogo: "twLogo_dd2mvuyUf.svg"
-    }
-    ,
-    config: {
-        individial: false,
-        grupos: [
-            { nombre: "empanadas", oculto: false, orden: [1, 2, 3] },
-            { nombre: "pizzas", oculto: false, orden: [1, 2, 3, 4] },
-            { nombre: "postres", oculto: false, orden: [1, 2, 3, 4] },
-            { nombre: "pastas", oculto: false, orden: [1, 2] },
-            { nombre: "tartas", oculto: false, orden: [1, 2] },
-            { nombre: "sanguches", oculto: false, orden: [1, 2] }
-        ]
     },
+    portada: [
+        "portada1_W-CNW0LKg.jpg",
+        "portada2_9RztSDO_k.jpg",
+        "portada3_yCNlRFIoz.webp",
+    ],
+    grupos,
     comidas: [
         {
-            grupo: "empanadas",
+            grupo: grupos.g1,
             idGroup: 1,
             nombre: "empanada de pollo",
             url: "emp-3_ibCNm4baT.jpg",
@@ -28,7 +31,7 @@ export default {
             precio: 50,
         },
         {
-            grupo: "empanadas",
+            grupo: grupos.g1,
             idGroup: 2,
             nombre: "empanada de carne",
             url: "emp-1_yzByGAPpv.jpg",
@@ -36,7 +39,7 @@ export default {
             precio: 50,
         },
         {
-            grupo: "empanadas",
+            grupo: grupos.g1,
             idGroup: 3,
             nombre: "empanada de Jamon y Queso",
             url: "empanada-jamonyQueso_0sioOflRu.jpg",
@@ -44,7 +47,7 @@ export default {
             precio: 50,
         },
         {
-            grupo: "pizzas",
+            grupo: grupos.g2,
             idGroup: 1,
             nombre: "Pizza Muzzarella",
             url: "pizza-5_CRTeh-p3P.jpg",
@@ -52,7 +55,7 @@ export default {
             precio: 800,
         },
         {
-            grupo: "pizzas",
+            grupo: grupos.g2,
             idGroup: 2,
             nombre: "Pizza Espesial",
             url: "pizza-4_xmAUzmtcK.jpg",
@@ -60,7 +63,7 @@ export default {
             precio: 1000,
         },
         {
-            grupo: "pizzas",
+            grupo: grupos.g2,
             idGroup: 3,
             nombre: "Pizza comun",
             url: "pizza-3_Bxbm-OBGr.webp",
@@ -68,7 +71,7 @@ export default {
             precio: 700,
         },
         {
-            grupo: "pizzas",
+            grupo: grupos.g2,
             idGroup: 4,
             nombre: "Pizza Calabresa",
             url: "pizza-2_4xX4ZcqEBN.jpg",
@@ -76,7 +79,7 @@ export default {
             precio: 850,
         },
         {
-            grupo: "postres",
+            grupo: grupos.g3,
             idGroup: 1,
             nombre: "Flan",
             url: "postre-2_2GZxwSn3f.jpg",
@@ -84,7 +87,7 @@ export default {
             precio: 400,
         },
         {
-            grupo: "postres",
+            grupo: grupos.g3,
             idGroup: 2,
             nombre: "Budin de Pan",
             url: "postre-1_ZWK6jjpWZ.webp",
@@ -92,7 +95,7 @@ export default {
             precio: 400,
         },
         {
-            grupo: "postres",
+            grupo: grupos.g3,
             idGroup: 3,
             nombre: "Helado",
             url: "postre-4_onpUG9wCa.jpg",
@@ -100,7 +103,7 @@ export default {
             precio: 400,
         },
         {
-            grupo: "postres",
+            grupo: grupos.g3,
             idGroup: 4,
             nombre: "Tarta Cabsha",
             url: "postre-5_E4TeuR_Lu.jpg",
@@ -108,7 +111,7 @@ export default {
             precio: 400,
         },
         {
-            grupo: "pastas",
+            grupo: grupos.g4,
             idGroup: 1,
             nombre: "Spageti",
             url: "past-4_q_DzGi-xI.jpg",
@@ -116,7 +119,7 @@ export default {
             precio: 800,
         },
         {
-            grupo: "pastas",
+            grupo: grupos.g4,
             idGroup: 2,
             nombre: "Ravioles",
             url: "past-3__neIQ-4S2.jpg",
@@ -124,7 +127,7 @@ export default {
             precio: 700,
         },
         {
-            grupo: "tartas",
+            grupo: grupos.g5,
             idGroup: 1,
             nombre: "Tarta de Espinaca",
             url: "tarta-1_SdFbIIWYm.jpg",
@@ -132,7 +135,7 @@ export default {
             precio: 800,
         },
         {
-            grupo: "tartas",
+            grupo: grupos.g5,
             idGroup: 2,
             nombre: "Tarta Primavera",
             url: "tarta-3_Hucq2XqLN.png",
@@ -140,7 +143,7 @@ export default {
             precio: 850,
         },
         {
-            grupo: "sanguches",
+            grupo: grupos.g6,
             idGroup: 1,
             nombre: "Sanguche de Milanesa",
             url: "sanguche-1_TrC7eZx8f.png",
@@ -148,7 +151,7 @@ export default {
             precio: 700,
         },
         {
-            grupo: "sanguches",
+            grupo: grupos.g6,
             idGroup: 2,
             nombre: "Sanguche de Pollo",
             url: "sanguche-2_Lt_j7dyKD.jpeg",

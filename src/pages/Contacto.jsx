@@ -5,7 +5,6 @@ export default function Contacto() {
     const datos = {
         nombre: "",
         email: "",
-        telefono: "",
         mensaje: ""
     }
     const [datosForm, setDatosForm] = useState(datos);
@@ -19,43 +18,46 @@ export default function Contacto() {
         })
     }
 
-    const submit = (e)=>{
+    const submit = (e) => {
         e.preventDefault();
     }
-    
+
 
     return (
         <div className='contacPage'>
-            <p>¿Tienes alguna sugerencia? Tutto Rico está para ayudarte, ¡Déjanos tu mensaje y nos comunicaremos a la brevedad!</p>
-            <form>
-                <input
-                    type="text"
-                    onChange={cambios}
-                    value={datosForm.nombre}
-                    name="nombre"
-                    placeholder='Nombre'
-                />
-                <input
-                    type="email"
-                    onChange={cambios}
-                    value={datosForm.email}
-                    name="email"
-                    placeholder='Email'
-                />
-                <input
-                    type="tel"
-                    onChange={cambios}
-                    value={datosForm.telefono}
-                    name="telefono"
-                    placeholder='Telefono'
-                />
+            <div className='TextoContact'>
+                <h1>Contáctanos</h1>
+                <p>¿Tienes alguna sugerencia? Tutto Rico está para ayudarte,
+                    <br />
+                    ¡Déjanos tu mensaje y nos comunicaremos a la brevedad!</p>
+            </div>
+            <form className='formContact'>
+                <div>
+                    <input
+                        type="text"
+                        onChange={cambios}
+                        value={datosForm.nombre}
+                        name="nombre"
+                        placeholder='Nombre'
+                        id='formName'
+                    />
+                    <input
+                        type="email"
+                        onChange={cambios}
+                        value={datosForm.email}
+                        name="email"
+                        placeholder='Email'
+                        id='formEmail'
+                    />
+                </div>
                 <textarea
                     onChange={cambios}
                     value={datosForm.mensaje}
                     name="mensaje"
                     placeholder='Mensaje'
+                    id='formMsg'
                 />
-                <button onClick={submit}>enviar</button>
+                <button id='formButton' onClick={submit}>enviar</button>
             </form>
         </div>
     )

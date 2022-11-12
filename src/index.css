@@ -1,23 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.contComidas {
-  border: 1px solid red;
-  width: fit-content;
+body {
+  font-family: 'Quicksand', sans-serif;
 }
 
-.divComida {
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/*-------- navegacion ---------*/
+.navegacionDiv {
+  height: 50px;
+  /* border: 1px solid red; */
+}
+
+.navFixi {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  width: 500px;
+  /* justify-content: space-between; */
+  position: fixed;
+  z-index: 2000;
+  width: 100vw;
+  height: 50px;
+  background-color: white;
+}
+
+.navImg {
+  width: 40px;
+  margin: 0 20px;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding-right: 50px;
+  align-items: center;
+  height: 50px;
+  /* border:  1px solid blue; */
+}
+
+.navLinks h1 {
+  font-weight: 300;
+}
+
+/*------------- Comida -----------*/
+.comidaCont {
+  display: flex;
+}
+
+.comidaNavSpace {
+  width: 100px;
+  height: 200px;
+}
+
+.comidaNavFixie {
+  position: fixed;
+}
+
+/*---------- Footer -----------*/
+.Footer {
   text-align: center;
 }
 
-.imgComida {
-  border: 1px solid blue;
+.FooterIconos ul {
+  display: flex;
+  justify-content: center;
+}
+
+.FooterIconos li {
+  margin: 0 20px;
+}
+
+.FooterIconos img {
+  width: 30px;
+}
+
+.FooterLogo {
+  margin-bottom: 10px;
+}
+
+.FooterLogo img {
+  width: 80px;
+}
+
+.FooterLogo {
+  font-size: 30px;
+}
+
+/*----------- Contacto ----------*/
+
+.TextoContact {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 25px;
+  color: white;
+  background-image: url("https://ik.imagekit.io/showimg/restorant-tutto-rico/fondo-catering-prop_56-j-cPto.jpg");
+}
+
+.formContact{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 600px;
+}
+.formContact div{
+  display: flex;
+  flex-direction: row;
 }

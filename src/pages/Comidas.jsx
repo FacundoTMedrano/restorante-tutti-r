@@ -1,28 +1,27 @@
 import React from 'react'
-import { IKImage } from "imagekitio-react";
 import datos from "../datos"
-
+import { Outlet, Link } from "react-router-dom"
 export default function Comidas() {
 
-  const colocar = datos.comidas.map((x, i) => {
+  const agrupar = ["Todo", ...Object.values(datos.grupos)]
+  const navGroups = agrupar.map((x, i) => {
     return (
-      <div key={i} className="divComida">
-        <IKImage
-          className='imgComida'
-          urlEndpoint={datos.urlEndpoint}
-          path={x.url}
-          transformation={[{ "w": "600", "h": "400" }]}
-          width="300px"
-        />
-        <h2>{x.nombre}</h2>
-        <p>{x.descr}</p>
-        <p>{x.precio}</p>
-      </div>
+      <li key={i}>
+        <Link to={x === "Todo" ? "/comidas" : x}>{x}</Link>
+      </li>
     )
   })
+
   return (
-    <div className='contComidas'>
-      {colocar}
+    <div className='comidaCont'>
+      <div className='comidaNavSpace'>
+        <div className='comidaNavFixie'>
+          <ul>
+            {navGroups}
+          </ul>
+        </div>
+      </div>
+      <Outlet />
     </div>
   )
 }
