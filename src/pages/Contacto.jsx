@@ -25,14 +25,17 @@ export default function Contacto() {
 
     return (
         <div className='contacPage'>
-            <div className='TextoContact'>
-                <h1>Contáctanos</h1>
-                <p>¿Tienes alguna sugerencia? Tutto Rico está para ayudarte,
-                    <br />
-                    ¡Déjanos tu mensaje y nos comunicaremos a la brevedad!</p>
+            <div className='contactoImgText'>
+                <div className='imgContacto'></div>
+                <div className='TextoContact'>
+                    <h1>Contáctanos</h1>
+                    <p>¿Tienes alguna sugerencia? Tutto Rico está para ayudarte,
+                        <br />
+                        ¡Déjanos tu mensaje y nos comunicaremos a la brevedad!</p>
+                </div>
             </div>
-            <form className='formContact'>
-                <div>
+            <div className='divContFormCont'>
+                <form className='formContact'>
                     <input
                         type="text"
                         onChange={cambios}
@@ -49,16 +52,16 @@ export default function Contacto() {
                         placeholder='Email'
                         id='formEmail'
                     />
-                </div>
-                <textarea
-                    onChange={cambios}
-                    value={datosForm.mensaje}
-                    name="mensaje"
-                    placeholder='Mensaje'
-                    id='formMsg'
-                />
-                <button id='formButton' onClick={submit}>enviar</button>
-            </form>
+                    <textarea
+                        onChange={cambios}
+                        value={datosForm.mensaje}
+                        name="mensaje"
+                        placeholder='Mensaje'
+                        id='formMsg'
+                    />
+                    <button id='formButton' onClick={submit}>enviar</button>
+                </form>
+            </div>
         </div>
     )
 }

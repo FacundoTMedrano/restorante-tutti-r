@@ -9,9 +9,10 @@ const grupos = {
 
 export default {
     urlEndpoint: "https://ik.imagekit.io/showimg/restorant-tutto-rico",
+    catering:"salones-para-eventos_ukVLX31Sc.jpg",
     logoNav: "tuttoLogo_po2GkzOEi.svg",
     footer: {
-        igLogo: "igLogo_mT0wf2210.svg",
+        igLogo: "ig_-F5w84Q0O.svg",
         fbLogo: "fbLogo_Zsy73e_uh.svg",
         twLogo: "twLogo_dd2mvuyUf.svg"
     },

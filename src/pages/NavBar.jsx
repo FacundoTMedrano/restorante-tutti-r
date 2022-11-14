@@ -1,28 +1,33 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { IKImage } from 'imagekitio-react'
 import datos from "../datos"
+import Up from '../hooks/Up'
 export default function NavBar() {
+
+    const goUp = Up()
     return (
         <div className='navegacionDiv'>
             <div className='navFixi'>
                 <div className='navImg'>
-                    <IKImage
-                        urlEndpoint={datos.urlEndpoint}
-                        path={datos.logoNav}
-                    />
+                    <NavLink to={"/"} onClick={() => goUp("/")}>
+                        <IKImage
+                            urlEndpoint={datos.urlEndpoint}
+                            path={datos.logoNav}
+                        />
+                    </NavLink>
                 </div>
                 <div className='navLinks'>
                     <NavLink to={"/"}>
                         <h1>Inicio</h1>
                     </NavLink>
-                    <NavLink to={"/comidas"}>
+                    <NavLink to={"/comidas"} onClick={() => goUp("/comidas")}>
                         <h1>Comidas</h1>
                     </NavLink>
-                    <NavLink to={"/contacto"}>
+                    <NavLink to={"/contacto"} onClick={() => goUp("/contacto")}>
                         <h1>Contacto</h1>
                     </NavLink>
-                    <NavLink to={"/catering"}>
+                    <NavLink to={"/catering"} onClick={() => goUp("/catering")}>
                         <h1>Catering</h1>
                     </NavLink>
                 </div>
