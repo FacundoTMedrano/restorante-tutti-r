@@ -18,7 +18,7 @@ export default function NavBar() {
                     </NavLink>
                 </div>
                 <div className='navLinks'>
-                    <NavLink to={"/"}>
+                    <NavLink to={"/"} onClick={() => goUp("/")}>
                         <h1>Inicio</h1>
                     </NavLink>
                     <NavLink to={"/comidas"} onClick={() => goUp("/comidas")}>

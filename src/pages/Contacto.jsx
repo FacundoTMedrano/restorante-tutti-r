@@ -42,6 +42,7 @@ export default function Contacto() {
                         value={datosForm.nombre}
                         name="nombre"
                         placeholder='Nombre'
+                        required
                         id='formName'
                     />
                     <input
@@ -50,6 +51,7 @@ export default function Contacto() {
                         value={datosForm.email}
                         name="email"
                         placeholder='Email'
+                        required
                         id='formEmail'
                     />
                     <textarea
@@ -57,6 +59,7 @@ export default function Contacto() {
                         value={datosForm.mensaje}
                         name="mensaje"
                         placeholder='Mensaje'
+                        required
                         id='formMsg'
                     />
                     <button id='formButton' onClick={submit}>enviar</button>
